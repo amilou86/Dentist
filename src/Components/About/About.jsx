@@ -1,13 +1,13 @@
 import React from 'react'
 import './About.css'
-import about1 from '../../assets/about1.png'
+import about2 from '../../assets/about2.png'
 // import play from '../../assets/play.png'
 
 const About = () => {
     return (
         <div className='about'>
             <div className='about-left'>
-                <img src={about1} className='about-img' alt="about-image" />
+                <img src={about2} className='about-img' alt="about-image" />
                 {/* <img src={play} className='about-img' alt="play-image" /> */}
             </div>
             <div className='about-right'>
