@@ -1,0 +1,57 @@
+.services {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    /* Change to grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Define 3 columns */
+    grid-gap: 20px;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+
+}
+
+.service {
+    flex-basis: 31%;
+    position: relative;
+}
+
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 20%;
+    transition: 0.4s;
+}
+
+.caption img {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.service:hover .caption {
+    opacity: 1;
+    padding-top: 0;
+}
+
+.service p {
+    font-size: 30px;
+}
