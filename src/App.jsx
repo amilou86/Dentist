@@ -15,10 +15,10 @@ function App() {
         <Navbar />
         <Hero />
         <div className="container">
+          <About />
           <Title subTitle='Our Services' title='What We Offer' />
           <Services />
         </div>
-        <About />
         <div className="container">
           <Routes>
             {/* <Route path="/" element={<Home />} />
