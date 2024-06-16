@@ -6,27 +6,40 @@ import Hero from './Components/Hero/Hero';
 import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Title from './Components/Title/Title'
+import Practice from "./Components/Practice/Practice";
+import Reviews from "./Components/Reviews/Reviews";
+import Contact from "./Components/Contact/Contact"
+import Footer from './Components/Footer/Footer'
 
 function App() {
   console.log("App component is being rendered.");
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Hero />
-        <div className="container">
-          <About />
-          <Title subTitle='Our Services' title='What We Offer' />
-          <Services />
-        </div>
-        <div className="container">
-          <Routes>
-            {/* <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} /> */}
-          </Routes>
-        </div>
+
+      <Navbar />
+      <Hero />
+      <div className="container">
+        <About />
+        <Title subTitle='Our Services' title='What We Offer' />
+        <Services />
+        <Title subTitle='Gallery' title='' />
+        <Practice />
+        <Title subTitle='Reviews' title='What Our Patients Say' />
+        <Reviews />
+        <Title subTitle='Contact Us' title='Get In Touch' />
+        <Contact />
       </div>
+      <div className="container">
+        <Routes>
+          <Route path="/Hero" element={<Hero />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Services" element={<Services />} />
+          {/* <Route path="/Application Form" element={<Application />} />
+          <Route path="/Fees" element={<Fees />} /> */}
+        </Routes>
+      </div>
+      <Footer />
     </Router>
   );
 }

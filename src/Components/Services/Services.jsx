@@ -32,17 +32,19 @@ const servicesData = [
 
 const Services = () => {
     return (
-        <div className='services'>
-            {servicesData.map((service) => (
-                <div className="service" key={service.title}>
-                    <img src={service.image} alt={service.title + " image"} />
-                    <div className="caption">
-                        <FaArrowPointer />
-                        <p>{service.title}</p>
+        <section id="services">
+            <div className='services'>
+                {servicesData.map((service) => (
+                    <div className="service" key={service.title}>
+                        <img src={service.image} alt={service.title + " image"} />
+                        <div className="caption">
+                            <FaArrowPointer />
+                            <p>{service.title}</p>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        </section>
     );
 
 }
