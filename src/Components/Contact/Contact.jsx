@@ -36,39 +36,67 @@ const Contact = () => {
         <section id="contact">
             <div className='contact'>
                 <div className="contact-col">
-                    <h3>For urgent and emergency treatment please call between 9am and 10am to be put on our daily priority list</h3>
-                    <h3>Send us a message <img src={message} alt="message icon" /></h3>
-                    <p>Feel free to recah out using our contact form to the right. Your feedback, questions and recommendations are important to us as we strive to provide the best possible service to our patients and clients. </p>
+                    <div className="contact-hours">
+                        <h2>Urgent & Emergency:</h2>
+                        <p>Please call between 9am and 10am to be put on our daily priority list.</p>
+                        <h2>Out of Hours Emergencies </h2>
+                        <p>Please call
+                            0161 476 9651. Available from 9am to 9.30pm every day, including weekends and Bank Holidays</p>
+                    </div>
+                    <h3>Application Form</h3>
+                    <p>To apply for registration, please complete and submit the form opposite. Please note that NHS capacity is currently very limited. </p>
                     <h3>Opening Hours: </h3>
                     <p> Monday - Friday: 9:00am - 5:30pm</p>
                     <p> Weekday evenings & Saturdays by appointment</p>
 
                     <p><MdOutlineMessage /> haltondentist@gmail.com</p>
                     <p><FaPhoneAlt /> Tel: 01928 569293</p>
-                    <p><IoLocationOutline /> Halton Road Dental Practice</p>
-                    <p>254 Halton Road</p>
-                    <p>Runcorn</p>
-                    <p>Cheshire</p>
-                    <p>WA7 5RL</p>
+                    <p><IoLocationOutline /> Halton Road Dental Practice
+                        <br />
+                        254 Halton Road
+                        <br />
+                        Runcorn
+                        <br />
+                        Cheshire <br />
+                        WA7 5RL <br />
+                    </p >
 
 
-                </div>
+                </div >
                 <div className="contact-col">
-                    <h3 className='out-of-hours'>For out of hours emergencies please call
-                        0161 476 9651. Available from 9am to 9.30pm every day, including weekends and Bank Holidays</h3>
+
                     <form onSubmit={onSubmit}>
-                        <label>Your name</label>
-                        <input type="text" name='name' placeholder='Enter your name' required />
-                        <label>Phone number</label>
+                        <h3>Application Form</h3>
+                        <label>First name *</label>
+                        <input type="text" name='first-name' placeholder='Enter your first name' required />
+                        <label>Last name *</label>
+                        <input type="text" name='last-name' placeholder='Enter last your name' required />
+                        <label>Email *</label>
+                        <input type="text" name='email' placeholder='Enter email address' required />
+                        <label>Phone number *</label>
                         <input type="text" name='phone' placeholder='Enter your phone number' required />
-                        <label> Write your message here</label>
-                        <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
+                        <label>Date of Brth *</label>
+                        <input type="text" name='dob' placeholder='Enter your date of birth' required />
+                        <label for="payable">
+                            <input type="checkbox" id="pay" name="payable" required /> Do you pay for NHS Dental Treatment?
+                        </label>
+                        <br />
+                        <p style={{ fontSize: 'smaller', display: 'inline-block' }}>
+                            You do not have to pay for NHS dental services if you're:
+                            under 18, or under 19 and in full-time education
+                            pregnant or have had a baby in the last 12 months
+                            receiving low income benefits such as Income Support, Income-related Employment and Support Allowance,  Jobseeker's Allowance, Pension Credit Guarantee Credit and/or Universal Credit
+                            named on an NHS tax credit exemption, HC2, HC3 or maternity exemption certificate
+                        </p>
+                        <br />
+                        <label>What services & treatments are you interested in? </label>
+                        <textarea name="message" rows="6" placeholder='Enter your message, include any additional comments you wish to support your application' required></textarea>
                         <button type='submit' className='btn dark-btn'>Submit</button>
                     </form>
                     <span>{result}</span>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
 

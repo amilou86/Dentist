@@ -1,0 +1,26 @@
+.team {
+    margin: 35px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    /* Adjust spacing between team members */
+}
+
+.team-member {
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.member-name {
+    margin-top: 10px;
+    /* Adjust spacing between image and name */
+}

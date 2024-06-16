@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import './Hero.css'
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+
+const handleClick = () => {
+    const phoneNum = '447922715288';
+    window.location.href = `https://wa.me/${phoneNum}`;
+};
 
 const Hero = () => {
 
@@ -15,7 +21,7 @@ const Hero = () => {
                         Runcorn<br />
                         Cheshire<br />
                         WA7 5RL</p>
-                    <button className='btn'>Explore More <FaArrowRightLong /></button>
+                    <button className='btn' onClick={handleClick}>Message us now via WhatsApp <FaWhatsapp /></button>
                 </div >
             </div >
         </section>

@@ -6,6 +6,11 @@ import gallery3 from '../../assets/gallery3.png'
 import gallery4 from '../../assets/gallery4.png'
 import { FaArrowRightLong } from "react-icons/fa6";
 
+const handleClick = () => {
+    // const
+    window.location.href = 'https://www.instagram.com/haltondentist/'
+}
+
 const Practice = () => {
     return (
         <div className='practice'>
@@ -15,7 +20,7 @@ const Practice = () => {
                 <img src={gallery3} alt="gallery images" />
                 <img src={gallery4} alt="gallery images" />
             </div>
-            <button className='btn dark-btn'>See Gallery <FaArrowRightLong /></button>
+            <button className='btn dark-btn' onClick={handleClick}>See Gallery <FaArrowRightLong /></button>
         </div>
     )
 }

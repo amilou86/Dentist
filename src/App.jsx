@@ -10,6 +10,7 @@ import Practice from "./Components/Practice/Practice";
 import Reviews from "./Components/Reviews/Reviews";
 import Contact from "./Components/Contact/Contact"
 import Footer from './Components/Footer/Footer'
+import Team from './Components/Team/Team'
 
 function App() {
   console.log("App component is being rendered.");
@@ -39,6 +40,7 @@ function App() {
           <Route path="/Fees" element={<Fees />} /> */}
         </Routes>
       </div>
+      <Team />
       <Footer />
     </Router>
   );
