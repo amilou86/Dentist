@@ -1,7 +1,6 @@
 import React from 'react'
 import './About.css'
 import about2 from '../../assets/about2.png'
-// import play from '../../assets/play.png'
 
 const About = () => {
     return (

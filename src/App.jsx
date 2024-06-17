@@ -36,8 +36,6 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Services" element={<Services />} />
-          {/* <Route path="/Application Form" element={<Application />} />
-          <Route path="/Fees" element={<Fees />} /> */}
         </Routes>
       </div>
       <Team />

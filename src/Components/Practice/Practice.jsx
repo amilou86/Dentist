@@ -7,7 +7,7 @@ import gallery4 from '../../assets/gallery4.png'
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const handleClick = () => {
-    // const
+
     window.location.href = 'https://www.instagram.com/haltondentist/'
 }
 

@@ -29,3 +29,32 @@
     font-weight: 16px;
 
 }
+
+/* media query */
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-left {
+        flex-basis: 100%;
+        margin: 20px;
+        order: 2;
+    }
+
+    .about-right {
+        flex-basis: 100%;
+
+    }
+}
+
+/* media query */
+@media (max-width: 700px) {
+    .contact {
+        display: block;
+    }
+
+    .contact-col {
+        padding: 20px;
+    }
+}

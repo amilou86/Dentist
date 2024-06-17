@@ -26,3 +26,20 @@ footer {
     opacity: 0.7;
     transform: translateY(-0.5rem);
 }
+
+/* media query */
+
+@media (max-width: 600px) {
+    .footer {
+        display: block;
+        text-align: center;
+    }
+
+    .footer ul li {
+        margin: 10px;
+    }
+
+    .footer ul {
+        margin-top: 10px;
+    }
+}

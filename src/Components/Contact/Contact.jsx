@@ -3,7 +3,6 @@ import './Contact.css'
 import { MdOutlineMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-import message from '../../assets/message.png'
 
 const Contact = () => {
 

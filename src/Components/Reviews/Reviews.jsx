@@ -33,7 +33,6 @@ const Reviews = () => {
                     <li>
                         <div className="slide">
                             <div className="userInfo">
-                                {/* <img src={user3} alt="user avatar" /> */}
                                 <div>
                                     <h3>Jane B</h3>
                                 </div>

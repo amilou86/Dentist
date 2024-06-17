@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Hero.css'
-import { FaArrowRightLong } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
 const handleClick = () => {

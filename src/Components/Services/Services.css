@@ -55,3 +55,25 @@
 .service p {
     font-size: 30px;
 }
+
+.service-modal {
+    padding: 2rem;
+    background-color: #fff;
+    /* Modal background color */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Optional shadow effect */
+}
+
+/* media query */
+
+@media (max-width: 650px) {
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex-basis: 100%;
+        margin: 20px;
+    }
+}

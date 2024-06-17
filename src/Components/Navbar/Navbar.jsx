@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import HRDlogo1 from '../../assets/HRDlogo1.png';
-import HRDlogo2 from '../../assets/HRDlogo2.png'
-import HRDlogo3 from '../../assets/HRDlogo3.png'
-import HRDlogo4 from '../../assets/HRDlogo4.png'
+import HRDlogo4 from '../../assets/HRDlogo4.png';
+import { IoIosCloseCircle } from "react-icons/io";
 
 const Navbar = () => {
     const links = [
@@ -23,16 +21,33 @@ const Navbar = () => {
         });
     }, []);
 
+    const [mobileMenu, setMobileMenu] = useState(false);
+
+    const toggleMenu = () => {
+        mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    }
+
     return (
         <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
             <img src={HRDlogo4} alt="logo" className="logo" />
-            <ul>
+            <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
                 {links.map((link) => (
                     <li key={link.id}>
-                        <a href={link.link}>{link.title}</a>
+                        {link.id === 4 ? ( // Check if it's the Fees & Finance item
+                            <Link
+                                to="../../assets/fee-guide.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {link.title}
+                            </Link>
+                        ) : (
+                            <a href={link.link}>{link.title}</a>
+                        )}
                     </li>
                 ))}
             </ul>
+            <p className='menu-icon' onClick={toggleMenu}>Navbar <IoIosCloseCircle /></p>
         </nav>
     );
 };
