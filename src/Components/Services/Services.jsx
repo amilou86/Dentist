@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Services.css'
-import { FaArrowPointer } from "react-icons/fa6";
-import Modal from 'react-modal';
 import routine from '../../assets/routine.png'
 import cleaning from '../../assets/cleaning.png'
 import fillings from '../../assets/fillings.png'
@@ -66,55 +64,23 @@ const servicesData = [
     },
 ];
 
-
 const Services = () => {
-    const [selectedService, setSelectedService] = useState(null);
-    const [showModal, setShowModal] = useState(false);
-
-    const handleServiceClick = (service) => {
-        setSelectedService(service);
-        setShowModal(true);
-    };
-
-    const closeModal = () => {
-        setSelectedService(null);
-        setShowModal(false);
-    };
 
 
     return (
         <section id="services">
             <div className='services'>
                 {servicesData.map((service) => (
-                    <div className={`service ${selectedService === service && 'selected'}`} key={service.title} onClick={() => handleServiceClick(service)} >
+                    <div className="service" key={service.title}>
                         <img src={service.image} alt={service.title + " image"} />
                         <div className="caption">
-                            <FaArrowPointer />
                             <p>{service.title}</p>
                         </div>
                     </div>
                 ))}
             </div>
-            {showModal && (
-                <Modal isOpen={showModal} onRequestClose={closeModal}>
-
-                    <Modal.Content classname="service-modal">
-                        <h2>{selectedService.title}</h2>
-                        <p>{selectedService.description}</p>
-                        {selectedService.images.length > 1 && (
-                            <div classname="service-images">
-                                {selectedService.image.map((image) => (
-                                    <img key={image} src={image} alt={selectedService.title + "additional image"} />
-                                ))}
-                            </div>
-                        )}
-                        <button onClick={closeModal}>Close</button>
-                    </Modal.Content>
-                </Modal>
-            )}
         </section>
     );
-
 }
 
 export default Services;
