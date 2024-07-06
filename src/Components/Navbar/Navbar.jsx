@@ -9,7 +9,6 @@ const Navbar = () => {
         { id: 1, link: '#hero', title: 'Home' },
         { id: 2, link: '#about', title: 'About' },
         { id: 3, link: '#services', title: 'Services' },
-        { id: 4, link: '#fees', title: 'Fees & Finance' },
         { id: 5, link: '#contact', title: 'Contact' },
     ];
 
